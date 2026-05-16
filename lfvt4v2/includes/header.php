@@ -23,10 +23,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/database.php");
     </title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://codevoyage.alttrifftneu.com/4.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://utensils.samwilliam.de/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Highlight.js CSS (Theme) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://utensils.samwilliam.de/highlight/styles/default.min.css">
 
 
     <!--- Custom CSS -->

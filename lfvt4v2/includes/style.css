@@ -4,7 +4,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column; /* Ermöglicht flexibles Layout */
-    background-image:url("../lfvt4v2/media/bg.png");
+    background-image:url("https://mediencenter.samwilliam.de/media/139/");
 }
 main {
     flex: 1; /* Nimmt den verfügbaren Platz ein */

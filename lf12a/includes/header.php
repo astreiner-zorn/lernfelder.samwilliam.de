@@ -15,7 +15,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
     <title>Praxisprojekt</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://codevoyage.alttrifftneu.com/4.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://utensils.samwilliam.de/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!--- Custom CSS -->
     <link rel="stylesheet" href="/lf12a/includes/style.css">

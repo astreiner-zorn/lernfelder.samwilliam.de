@@ -8,7 +8,7 @@
 </footer>
 
 <!-- Bootstrap JS -->
-<script src="https://codevoyage.alttrifftneu.com/4.0.0/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://utensils.samwilliam.de/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
