@@ -1,7 +1,7 @@
 <?php
     $pageTitle = "Login-Seite";
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/middle.php");
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/forms/login.form.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/middle.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/forms/login.form.php");
 ?>
 
 

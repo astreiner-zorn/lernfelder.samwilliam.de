@@ -4,7 +4,7 @@
     ";
 ?>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/middle.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/middle.php"); ?>
 <table class="table table-striped table-bordered">
     <thead>
         <tr>

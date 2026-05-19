@@ -1,4 +1,11 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/header.php"); ?>
+<?php
+// Fehlermeldungen anzeigen (nur für Entwicklungszwecke, in Produktion deaktivieren!)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+?>
+
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?>
 
 <?php
 // Standardseite setzen
@@ -9,12 +16,12 @@ if ($page === '') {
 }
 
 // Pfad zur Datei
-$filePath = $_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/pages/" . $page . ".page.php";
+$filePath = $_SERVER['DOCUMENT_ROOT'] . "/pages/" . $page . ".page.php";
 if (file_exists($filePath)) {
     include $filePath;
 } else {
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/404.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/404.php");
 }
 ?>
 
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/footer.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

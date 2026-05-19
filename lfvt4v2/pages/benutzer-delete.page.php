@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Benutzer löschen";
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/middle.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/middle.php");
 
 if (!isset($_GET['id'])) {
     die("Keine Benutzer-ID übergeben.");

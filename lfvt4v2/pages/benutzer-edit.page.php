@@ -1,6 +1,6 @@
 <?php
     $pageTitle = "Benutzer bearbeiten";
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/middle.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/middle.php");
 
 if (!isset($_GET['id'])) {
     die("Keine Benutzer-ID übergeben.");
@@ -12,7 +12,7 @@ $sql = "SELECT * FROM lfvt4v2_login WHERE id = :id";
 $statement = $connection->prepare($sql);
 $statement->execute(['id' => $id]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/forms/benutzer-edit.form.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/forms/benutzer-edit.form.php");
 
 if (!$user) {
     die("Benutzer nicht gefunden.");

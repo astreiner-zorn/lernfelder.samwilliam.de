@@ -1,9 +1,9 @@
 <?php
 ob_start();
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/session.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/session.php");
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
 <!DOCTYPE html>

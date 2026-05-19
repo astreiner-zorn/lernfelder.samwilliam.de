@@ -1,10 +1,10 @@
 <?php
 $pageTitle = "Registrierung";
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/includes/middle.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/middle.php");
 ?>
 
 <?php if (!isset($benutzer)): ?>
-    <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lfvt4v2/forms/register.form.php"); ?>
+    <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/forms/register.form.php"); ?>
     <?php if (isset($_POST['benutzername'], $_POST['passwort'], $_POST['passwort_wdh'])): ?> 
         <?php
             $benutzername = htmlspecialchars(trim($_POST['benutzername']));

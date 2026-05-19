@@ -1,5 +1,6 @@
-<?php require_once("includes/header.php"); ?>
-    <?php
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php"); ?> 
+
+<?php
     // Standardseite setzen
     $page = $_GET['page'] ?? '';
 
@@ -18,5 +19,6 @@
     } else {
         include "lib/errors/404.php";
     }
-    ?>
-<?php require_once("includes/footer.php"); ?>
+?>
+
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>
