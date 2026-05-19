@@ -1,8 +1,6 @@
 <?php
 ob_start();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/session.php");
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
