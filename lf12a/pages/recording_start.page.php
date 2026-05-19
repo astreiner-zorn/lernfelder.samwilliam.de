@@ -1,7 +1,7 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 // Arbeitszeit-Start: setzt Login-Datum/-Uhrzeit; Logout bleibt NULL
-// Voraussetzung: $pdo (PDO) existiert und Session enthält Nutzer-ID
+// Voraussetzung: $connection (PDO) existiert und Session enthält Nutzer-ID
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
@@ -15,7 +15,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $userId = (int) $_SESSION['user_id']; // Fremdschlüssel auf user.id
 try {
-    $stmt = $pdo->prepare(
+    $stmt = $connection->prepare(
         'INSERT INTO lf12a_timestamps (user_id, login_date, login_time, logout_date, logout_time)
          VALUES (:uid, CURDATE(), CURTIME(), NULL, NULL)'
     );

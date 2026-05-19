@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 // pages/benutzer-delete.page.php
 // Verhindert, dass ein eingeloggter Benutzer sich selbst löscht
 
@@ -21,7 +21,7 @@ if ($isthatyou === $id) {
 }
 
 $sql = "SELECT * FROM lf12a_user WHERE id = :id";
-$statement = $pdo->prepare($sql);
+$statement = $connection->prepare($sql);
 $statement->execute(['id' => $id]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -30,7 +30,7 @@ if (!$user) {
 }
 
 $sql = "DELETE FROM lf12a_user WHERE id = :id";
-$statement = $pdo->prepare($sql);
+$statement = $connection->prepare($sql);
 $statement->execute(['id' => $id]);
 
 header("Location: index.php?page=users");

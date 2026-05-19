@@ -1,4 +1,4 @@
-<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/sql.header.php"); ?>
+<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/sql.header.php"); ?>
 
 SELECT lf08v2_fahrraeder.fahrradnr, lf08v2_fahrradarten.bezeichnung, lf08v2_hersteller.herstellername FROM lf08v2_fahrraeder JOIN lf08v2_modelle ON lf08v2_fahrraeder.modellnr = lf08v2_modelle.modellnr JOIN lf08v2_fahrradarten ON lf08v2_modelle.artnr = lf08v2_fahrradarten.artnr JOIN lf08v2_hersteller ON lf08v2_modelle.herstellernr = lf08v2_hersteller.herstellernr WHERE lf08v2_fahrradarten.bezeichnung = 'Kinderrad';
 <?php include("middle.php"); ?>
@@ -27,4 +27,4 @@ SELECT lf08v2_fahrraeder.fahrradnr, lf08v2_fahrradarten.bezeichnung, lf08v2_hers
     </tbody>
 </table>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

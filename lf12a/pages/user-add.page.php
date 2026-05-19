@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
 <?php if (isset($benutzer)): ?>
@@ -10,7 +10,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
             $password = $_POST['password']; 
 
             $sql = "SELECT * FROM lf12a_user WHERE username = :username";
-            $statement = $pdo->prepare($sql);
+            $statement = $connection->prepare($sql);
             $statement->execute([':username' => $username]);
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -20,7 +20,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
                 $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
                 $sql = "INSERT INTO lf12a_user (username, password) VALUES (:username, :password)";
-                $statement = $pdo->prepare($sql);
+                $statement = $connection->prepare($sql);
                 $statement->execute([
                     ':username' => $username,
                     ':password' => $password_hash

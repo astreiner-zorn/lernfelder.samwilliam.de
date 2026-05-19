@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
 <?php if (isset($benutzer)): ?>
@@ -8,7 +8,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
                 FROM lf12a_timestamps t
                 INNER JOIN lf12a_user u ON t.user_id = u.id
                 ORDER BY t.id ASC";
-        $statement = $pdo->prepare($sql);
+        $statement = $connection->prepare($sql);
         $statement->execute();
         $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>

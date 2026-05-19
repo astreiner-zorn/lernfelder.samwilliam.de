@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/session.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/session.php");
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
   session_start();
@@ -45,7 +45,7 @@ if ($start) $where .= " AND login_date >= :start";
 if ($end)   $where .= " AND login_date <= :end";
 
 $sql = "DELETE FROM lf12a_timestamps $where";
-$stmt = $pdo->prepare($sql);
+$stmt = $connection->prepare($sql);
 $stmt->bindValue(':uid', $userId, PDO::PARAM_INT);
 if ($start) $stmt->bindValue(':start', $start);
 if ($end)   $stmt->bindValue(':end',   $end);
@@ -58,5 +58,5 @@ $q = [];
 if ($start) $q[] = 'start=' . urlencode($start);
 if ($end)   $q[] = 'end=' . urlencode($end);
 $q[] = 'deleted=' . $deleted;
-header('Location: /lf12a/index.php?page=index&' . implode('&', $q));
+header('Location: /index.php?page=index&' . implode('&', $q));
 exit;

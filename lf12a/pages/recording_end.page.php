@@ -1,7 +1,7 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 // Arbeitszeit-Ende: setzt Logout-Datum/-Uhrzeit für den letzten offenen Eintrag
-// Voraussetzung: $pdo (PDO) existiert und Session enthält Nutzer-ID
+// Voraussetzung: $connection (PDO) existiert und Session enthält Nutzer-ID
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
@@ -17,7 +17,7 @@ $userId = (int) $_SESSION['user_id'];
 
 try {
     // Das letzte offene Timestamp-Record ohne Logout für diesen User updaten
-    $stmt = $pdo->prepare(
+    $stmt = $connection->prepare(
         'UPDATE lf12a_timestamps
          SET logout_date = CURDATE(), logout_time = CURTIME()
          WHERE user_id = :uid

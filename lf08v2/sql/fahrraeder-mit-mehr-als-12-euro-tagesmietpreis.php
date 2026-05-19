@@ -1,4 +1,4 @@
-<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/sql.header.php"); ?>
+<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/sql.header.php"); ?>
 
 SELECT lf08v2_modelle.bezeichnung, lf08v2_hersteller.herstellernr, lf08v2_hersteller.herstellername, tagesmietpreis FROM lf08v2_hersteller JOIN lf08v2_modelle WHERE herstellername LIKE 'Scott' AND tagesmietpreis > '12';
 
@@ -30,4 +30,4 @@ SELECT lf08v2_modelle.bezeichnung, lf08v2_hersteller.herstellernr, lf08v2_herste
     </tbody>
 </table>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

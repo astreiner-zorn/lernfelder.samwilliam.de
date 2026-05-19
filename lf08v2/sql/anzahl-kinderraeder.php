@@ -1,4 +1,4 @@
-<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/sql.header.php"); ?>
+<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/sql.header.php"); ?>
 
 SELECT COUNT(*) AS anzahl_fahrraeder FROM lf08v2_modelle JOIN lf08v2_fahrradarten ON lf08v2_fahrradarten.artnr = lf08v2_modelle.artnr WHERE lf08v2_fahrradarten.bezeichnung = 'Kinderrad';
 
@@ -24,4 +24,4 @@ SELECT COUNT(*) AS anzahl_fahrraeder FROM lf08v2_modelle JOIN lf08v2_fahrradarte
     </tbody>
 </table>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

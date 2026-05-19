@@ -1,9 +1,9 @@
 <?php
 ob_start();
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/session.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/session.php");
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
     <link href="https://utensils.samwilliam.de/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!--- Custom CSS -->
-    <link rel="stylesheet" href="/lf12a/includes/style.css">
+    <link rel="stylesheet" href="/includes/style.css">
 </head>
 
 <body>

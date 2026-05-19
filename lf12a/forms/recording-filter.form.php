@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
 <form method="GET" class="row g-3 align-items-end mt-3 mb-2">
@@ -50,7 +50,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
       ORDER BY login_date DESC, login_time DESC
     ";
 
-    $stmt = $pdo->prepare($sql);
+    $stmt = $connection->prepare($sql);
     $stmt->bindValue(':uid', (int)$_SESSION['user_id'], PDO::PARAM_INT);
     if ($start) { $stmt->bindValue(':start', $start); }
     if ($end)   { $stmt->bindValue(':end',   $end); }

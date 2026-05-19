@@ -1,5 +1,5 @@
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf10a/php/includes/database-connect.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/includes/database-connect.php");
     
     $sql = "Select * FROM autor WHERE autorid = 3;";
     $stmt = $connection->query($sql);

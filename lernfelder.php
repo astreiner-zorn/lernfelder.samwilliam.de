@@ -3,26 +3,26 @@ $lernfelder = [
     [
         'Lernfeld'     => "LF08v2",
         'Beschreibung' => "Lorem Ipsum",
-        'URL'          => "/lf08v2/"
+        'URL'          => "http://lf08v2.lernfelder.localhost"
     ],
     [
         'Lernfeld'     => "LF10a",
         'Beschreibung' => "Lorem Ipsum",
-        'URL'          => "/lf10a/"
+        'URL'          => "http://lf10a.lernfelder.localhost"
     ],
     [
         'Lernfeld'     => "LF-VT4a",
         'Beschreibung' => "Lorem Ipsum",
-        'URL'          => "/lfvt4v2/"
+        'URL'          => "http://lfvt4v2.lernfelder.localhost"
     ],
     [
         'Lernfeld'     => "LF12a",
         'Beschreibung' => "Lorem Ipsum",
-        'URL'          => "/lf12a/"
+        'URL'          => "http://lf12a.lernfelder.localhost"
     ],
     [
         'Lernfeld'     => "LF-ZQ8a",
         'Beschreibung' => "Lorem Ipsum",
-        'URL'          => "/lfzq8a/"
+        'URL'          => "http://lfzq8a.lernfelder.localhost"
     ]
 ];

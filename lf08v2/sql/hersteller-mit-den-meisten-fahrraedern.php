@@ -1,4 +1,4 @@
-<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/sql.header.php"); ?>
+<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/sql.header.php"); ?>
 
 SELECT lf08v2_hersteller.herstellername AS hersteller, COUNT(*) AS anzahl FROM lf08v2_hersteller JOIN lf08v2_modelle ON lf08v2_modelle.herstellernr = lf08v2_hersteller.herstellernr GROUP BY hersteller ORDER BY anzahl DESC LIMIT 1;
 
@@ -26,4 +26,4 @@ SELECT lf08v2_hersteller.herstellername AS hersteller, COUNT(*) AS anzahl FROM l
     </tbody>
 </table>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

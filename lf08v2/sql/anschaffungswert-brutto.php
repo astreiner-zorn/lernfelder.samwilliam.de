@@ -1,7 +1,7 @@
 <?php
     $bereich = 'SQL-Bereich';
     $pageTitle = 'Startseite der SQL-Instanz';
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/sql.header.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/sql.header.php");
 ?>
 
 
@@ -31,4 +31,4 @@ SELECT fahrradnr, anschaffungswert, anschaffungswert * 1.19 AS brutto_anschaftsw
     </tbody>
 </table>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

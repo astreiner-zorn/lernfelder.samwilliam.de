@@ -1,9 +1,9 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
 <?php if (empty($_SESSION['user'])): ?>
-    <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf12a/forms/register.form.php"); ?>
+    <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/forms/register.form.php"); ?>
     <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['password'], $_POST['password_wdh'])): ?> 
         <?php
             $username = htmlspecialchars(trim($_POST['username']));
@@ -11,7 +11,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
             $password_wdh = $_POST['password_wdh']; 
 
             $sql = "SELECT * FROM lf12a_user WHERE username = :username";
-            $statement = $pdo->prepare($sql);
+            $statement = $connection->prepare($sql);
             $statement->execute([':username' => $username]);
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -23,7 +23,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
                 $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
                 $sql = "INSERT INTO lf12a_user (username, password) VALUES (:username, :password)";
-                $statement = $pdo->prepare($sql);
+                $statement = $connection->prepare($sql);
                 $statement->execute([
                     ':username' => $username,
                     ':password' => $password_hash

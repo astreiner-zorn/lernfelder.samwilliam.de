@@ -1,4 +1,4 @@
-<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/sql.header.php"); ?>
+<?php $bereich = 'SQL-Bereich'; $pageTitle = 'Startseite der SQL-Instanz'; require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/sql.header.php"); ?>
 
 SELECT MAX(lf08v2_modelle.tagesmietpreis) AS max_tagesmietpreis FROM lf08v2_modelle JOIN lf08v2_hersteller ON lf08v2_hersteller.herstellernr = lf08v2_modelle.herstellernr;
 
@@ -24,4 +24,4 @@ SELECT MAX(lf08v2_modelle.tagesmietpreis) AS max_tagesmietpreis FROM lf08v2_mode
     </tbody>
 </table>
 
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf08v2/includes/footer.php"); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>

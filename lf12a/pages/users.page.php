@@ -1,11 +1,11 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 ?>
 
 <?php if (isset($benutzer)): ?>
     <?php
         $sql = "SELECT * FROM lf12a_user";
-        $statement = $pdo->prepare($sql);
+        $statement = $connection->prepare($sql);
         $statement->execute();
         $user = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>

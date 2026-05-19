@@ -1,5 +1,5 @@
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/lf10a/php/includes/database-connect.php");
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/includes/database-connect.php");
 
     $sql = "SELECT buchID, ISBN, titel FROM buch WHERE titel = 'Es';";
     $stmt = $connection->query($sql);

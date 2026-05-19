@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 logout_date = :logout_date, 
                 logout_time = :logout_time
             WHERE id = :id";
-    $stmt = $pdo->prepare($sql);
+    $stmt = $connection->prepare($sql);
     $stmt->execute([
         ':login_date'  => $login_date ?: null,
         ':login_time'  => $login_time ?: null,
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Datensatz laden
 $sql = "SELECT * FROM lf12a_timestamps WHERE id = :id";
-$stmt = $pdo->prepare($sql);
+$stmt = $connection->prepare($sql);
 $stmt->execute([':id' => $id]);
 $entry = $stmt->fetch(PDO::FETCH_ASSOC);
 

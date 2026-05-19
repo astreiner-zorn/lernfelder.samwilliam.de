@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/forms/login.form.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/forms/login.form.php");
 ?>
 
 <?php if (isset($_POST['username']) && isset($_POST['password'])): ?> 
@@ -10,7 +10,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/forms/login.form.php");
 
     <?php
     $sql = "SELECT * FROM lf12a_user WHERE username = :username";
-    $statement = $pdo->prepare($sql);
+    $statement = $connection->prepare($sql);
     $statement->bindParam(':username', $username, PDO::PARAM_STR);
     $statement->execute();
     $user = $statement->fetch(PDO::FETCH_ASSOC);

@@ -20,8 +20,8 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // --- Abhängigkeiten ---
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
-require_once $_SERVER['DOCUMENT_ROOT'] . '/lf12a/includes/tcpdf/tcpdf.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
+require_once $_SERVER['DOCUMENT_ROOT'] . 'https://utensils.samwilliam.de/tcpdf/tcpdf.php';
 
 // ---- Branding / Header/Footer ---------------------------------------------
 class PDF extends TCPDF
@@ -92,7 +92,7 @@ $sql = "
   ORDER BY login_date DESC, login_time DESC
 ";
 
-$stmt = $pdo->prepare($sql);
+$stmt = $connection->prepare($sql);
 $stmt->bindValue(':uid', $userId, PDO::PARAM_INT);
 if ($start) {
   $stmt->bindValue(':start', $start);

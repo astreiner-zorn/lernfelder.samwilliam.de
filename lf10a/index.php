@@ -1,3 +1,3 @@
 <?php
-header("Location: /lf10a/php/");
+header("Location: /php/");
 exit();
